@@ -106,7 +106,7 @@ var s3 = function s3 ( params, callback ) {
       contentType = params.contentType || lowercaseHeaders[ 'content-type' ] 
          || "",
       date = params.date || lowercaseHeaders[ 'date' ] 
-         || dateformat( new Date(), "UTC:ddd, dd mmm yyyy HH:MM:ss Z" );
+         || dateformat( new Date(), "UTC:ddd, dd mmm yyyy HH:MM:ss +0000" );
 
   var canonicalResource = createCanonicalResource( bucketName, objectName,
      subResources );
