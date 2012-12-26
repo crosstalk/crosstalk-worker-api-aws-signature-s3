@@ -62,7 +62,7 @@ var createStringToSign = function createStringToSign ( httpVerb, contentMD5,
 
 var hmac = function hmac ( key, stringToSign, format ) {
 
-  return crypto.createHmac( 'sha256', key ).update( stringToSign )
+  return crypto.createHmac( 'sha1', key ).update( stringToSign )
      .digest( format );
 
 }; // hmac
