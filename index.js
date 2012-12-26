@@ -104,9 +104,16 @@ var s3 = function s3 ( params, callback ) {
   //
   var contentMD5 = params.contentMD5 || lowercaseHeaders[ 'content-md5' ] || "",
       contentType = params.contentType || lowercaseHeaders[ 'content-type' ] 
-         || "",
-      date = params.date || lowercaseHeaders[ 'date' ] 
-         || dateformat( new Date(), "UTC:ddd, dd mmm yyyy HH:MM:ss +0000" );
+         || "";
+
+  var date = "";
+
+  if ( ! lowercaseHeaders[ 'x-amz-date' ] ) {
+
+    date = params.date || lowercaseHeaders[ 'date' ]
+       || dateformat( new Date(), "UTC:ddd, dd mmm yyyy HH:MM:ss +0000" );
+
+  } // if ( ! lowercaseHeaders[ 'x-amz-date' ] )
 
   var canonicalResource = createCanonicalResource( bucketName, objectName,
      subResources );
@@ -130,7 +137,7 @@ var s3 = function s3 ( params, callback ) {
     authorization : authorizationHeader,
     date : date,
     signature : signature
-  })
+  });
 
 }; // s3
 
