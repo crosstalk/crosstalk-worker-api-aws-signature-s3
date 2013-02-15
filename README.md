@@ -11,4 +11,4 @@ crosstalk-worker-api-aws-signature-s3
 
 ## crosstalk.on
 
-[api.aws.signature.s3](/crosstalk/crosstalk-worker-api-aws-signature-s3/wiki/api.aws.signature.s3) - Creates AWS S3 signature
+[api.aws.signature.s3](https://github.com/crosstalk/crosstalk-worker-api-aws-signature-s3/wiki/api.aws.signature.s3) - Creates AWS S3 signature
