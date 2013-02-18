@@ -3,6 +3,8 @@ crosstalk-worker-api-aws-signature-s3
 
 `crosstalk-worker-api-aws-signature-s3` is a Crosstalk worker that calculates AWS S3 signatures for HTTP requests.
 
+_Click on links below for detailed documentation._
+
 ## Configuration
 
 ```json
